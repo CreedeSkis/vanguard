@@ -38,6 +38,7 @@ body {
     font-family: var(--font);
     background: var(--white);
     color: var(--charcoal);
+    text-align: center;
 }
 
 ol, ul {
@@ -70,6 +71,7 @@ table {
 h1, h2, h3{
     font-weight: 700;
     color: var(--charcoal);
+    padding: 1rem;
 }
 
 p {
@@ -96,6 +98,28 @@ img {
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 body {
     min-width: 400px;
+    font-family: var(--font);
+    background: var(--charcoal);
+    color: var(--white);
+    line-height: 1.6;
+}
+header h1 {
+    position: relative;
+    padding-left: 4.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+}
+nav ul {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
 #hero {
@@ -109,7 +133,31 @@ body {
     overflow: hidden;
     color: white;
 }
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
 
+#hero p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.1rem;
+}
+
+#hero button {
+    padding: 0.75rem 2rem;
+    background: var(--blue);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
@@ -120,19 +168,14 @@ body {
 
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
-header h1 ::before {
+header h1::before {
     content: "";
-    left:-.5rem;
+    position: absolute;
+    top: 0;
+    left: -0.5rem;
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
-
-}
-header h1 {
-    position: relative;
-    padding-left: 4.5rem;
-    font-size: 2rem;
-    font-weight: bold;
 }
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
@@ -155,6 +198,7 @@ header h1 {
     position: relative;
     transition: height 0.6s ease-in-out;
     height: 0;
+     animation: stepUp 1s ease-in-out forwards;
 }
 /* THIS ONE IS DONE FOR YOU */
 .bar::after {
@@ -190,12 +234,15 @@ form {
     gap: 1rem;
     margin-top: 1rem;
 }
+
 input, textarea {
     padding: 0.75rem;
-    border: 1px solid var(--charcoal);
+    border: 1px solid black;
     border-radius: 5px;
-    width: 100%;
+    background: var(--charcoal);
+    color: white;
 }
+
 button {
     padding: 0.75rem 1.5rem;
     background: var(--blue);
@@ -204,8 +251,53 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
 button:hover {
     background: var(--red);
+}
+
+#services {
+    margin-top: 3rem;
+}
+
+#services article {
+    background: var(--blue);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+#services h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+#services p {
+    color: white;
+}
+
+#results {
+    margin-top: 3rem;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+th, td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--charcoal);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    color: var(--white);
+    background-color: var(--black);
 }
 
 /* MEDIA QUERIES (MEDIUM) */ 
