@@ -1,4 +1,4 @@
-/* CSS BY YOUR NAME */
+/* Creede Yerkey */
 
 /* IMPORTED FONTS*/
 /* IMPORT "INTER" FROM GOOGLE FONTS"
@@ -63,9 +63,23 @@ table {
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
-
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
-
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+                url('images/vanguard-hero.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+    overflow: hidden;
+    color: white;
+}
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
