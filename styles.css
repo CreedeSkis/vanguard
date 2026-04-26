@@ -260,6 +260,10 @@ td {
     background-color: var(--black);
 }
 
+#contact label{
+    color: var(--white);
+}
+
 form {
     display: grid;
     gap: 1rem;
